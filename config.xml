@@ -3,7 +3,7 @@
 <preference name="phonegap-version" value="cli-9.0.0" />
   <name>Contacts</name>
   <description>
-      Esta es una App de PhoneGap contactos cordova-plugin-contacts
+      Esta es una App de PhoneGap contactos contacts
   </description>
   <author email="Luis Eduardo Garcia Caltzoncin" href="http://cordova.io">
       Apache Cordova Team
