@@ -8,8 +8,11 @@
 
     // Wait for device API libraries to load
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
+    
+    function onBodyLoad() {
+        //alert("onBodyLoad");
+        document.addEventListener("deviceready", onDeviceReady, false);
+}
     // device APIs are available
     //
     function onDeviceReady() {
@@ -20,7 +23,7 @@
 
     </script>
   </head>
-  <body>
+  <body onload="onBodyLoad()">
     <h1>Example</h1>
     <p>Create Contact</p>
   </body>
