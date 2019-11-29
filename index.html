@@ -18,15 +18,11 @@ alert(contactInfo.FullName + " was successfully saved to the device contacts dat
     // device APIs are available
     //
     function onDeviceReady() {
-        var contact = navigator.contacts.create({
-"FullName": "Michael Palin",
-"LastName": "Palin",
-"FirstName": "Michael",
-"EmailAddress": "michael@montypython.com",
-"OfficePhone": "330.123.4567",
-"MobilePhone": "330.987.6543"
-});
-contact.save(onContactSaveSuccess, onContactSaveError);
+        var contact = navigator.contacts.create({displayName:
+'Michael Palin', nickname: 'Mike', name: {givenName:
+'Michael', familyName: 'Palin'}});
+contact.save(onContactSaveSuccess, onContactSaveError)
+
         myContact.note = "This contact has a note.";
        alert("The contact, " + myContact.displayName + ", note: " + myContact.note);
        
