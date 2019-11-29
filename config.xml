@@ -17,5 +17,4 @@ email="developer@somecompany.com">John M. Wargo</author>
 <feature name="Contacts">
     <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
 </feature>
-<feature id="blackberry.pim.Contact" />
 </widget>
