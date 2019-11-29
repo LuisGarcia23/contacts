@@ -8,7 +8,9 @@
 
     // Wait for device API libraries to load
     //
-    
+    function onContactSaveSuccess() {
+alert(contactInfo.FullName + " was successfully saved to the device contacts database");}
+
     function onBodyLoad() {
         //alert("onBodyLoad");
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -16,15 +18,26 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        var myContact = navigator.contacts.create({"displayName": "Test User"});
+        var contact = navigator.contacts.create({
+"FullName": "Michael Palin",
+"LastName": "Palin",
+"FirstName": "Michael",
+"EmailAddress": "michael@montypython.com",
+"OfficePhone": "330.123.4567",
+"MobilePhone": "330.987.6543"
+});
+contact.save(onContactSaveSuccess, onContactSaveError);
         myContact.note = "This contact has a note.";
        alert("The contact, " + myContact.displayName + ", note: " + myContact.note);
-    }
+       
+}
+    
 
     </script>
   </head>
   <body onload="onBodyLoad()">
     <h1>Example</h1>
     <p>Create Contact</p>
+    <button onclick="onContactSaveSuccess()">Contacto</button>
   </body>
 </html>
