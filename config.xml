@@ -13,6 +13,9 @@
   <plugin name="cordova-plugin-dialogs"/> 
   <plugin name="cordova-plugin-device"/>
    <plugin name="cordova-plugin-contacts"/>
+   <uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
   <access origin="*" />
   <allow-intent href="http://*/*" />
   <allow-intent href="https://*/*" />
